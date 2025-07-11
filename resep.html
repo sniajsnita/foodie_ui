@@ -1,0 +1,320 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Foodie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="resep.css">
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- sidebar start -->
+        <div class="col-1 flex h-screen p-0 position-fixed">
+          <div
+            class="bg-cyan-200 w-20 flex flex-col items-center py-4 space-y-8 rounded-r-3xl"
+          >
+            <div class="flex flex-col items-center space-y-4">
+              <a href="#" class="menu-item active">
+                <div class="icon-container">
+                  <i class="bi bi-house"></i>
+                </div>
+                <span>Beranda</span>
+              </a>
+              <a href="komunitas.html" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-people"></i>
+                </div>
+                <span>Komunitas</span>
+              </a>
+              <a href="chat.html" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-chat-left-text"></i>
+                </div>
+                <span>Obrolan</span>
+              </a>
+              <a href="saveall.html" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-bookmark"></i>
+                </div>
+                <span>Bookmark</span>
+              </a>
+              <a href="unggahfoto.html" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-plus-square"></i>
+                </div>
+                <span>Buat</span>
+              </a>
+              <a href="#" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-gear"></i>
+                </div>
+                <span>Pengaturan</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- sidebar end -->
+
+        <!-- Main Content start -->
+        <div class="col-11 flex-1 p-0">
+          <!-- header start -->
+          <div class="flex items-center justify-between sticky-header">
+            <div class="flex items-center space-x-2">
+              <span class="text-xl font-bold px-2">foodie</span>
+              <div class="koin-nav text-center p-2">
+                <a href="homekoin.html">
+                  <div class="bg-yellow-400 w-8 h-8 flex items-center justify-center rounded-full mx-auto">
+                    <img src="images/Koin.png" alt="">
+                  </div>
+                  <p style="font-size: 12px;">12000</p>
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+              <div class="relative">
+                <input
+                  class="w-96 h-10 pl-4 pr-10 rounded-full border border-black"
+                  placeholder="Search"
+                  type="text"
+                />
+                <i
+                  class="fas fa-search absolute right-3 top-1/2 transform -translate-y-1/2"
+                ></i>
+              </div>
+
+              <a href="#" class="menu-nav">
+                <div class="icon-container">
+                  <i class="bi bi-bell"></i>
+                </div>
+              </a>
+
+              <div class="nav-profile">
+                <a href="profileuser.html" class="menu-nav">
+                  <div class="icon-container">
+                    <i class="bi bi-person-circle"></i>
+                  </div>
+                  <span>Chanyeol</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- header end -->
+
+
+          <div class="container mt-5">
+            <div class="row">
+                <!-- Kolom 1 -->
+                <div class="col-md-4">
+                    <div class="p-3">
+                        <div class="mb-4">
+                            <img src="images/nasi gor gor.jpg" alt="A plate of fried rice with a sunny-side-up egg, sliced cucumbers, tomatoes, lime, and garnishes" class="main-image">
+                        </div>
+                        <div class="thumbnails">
+                            <div class="flex space-x-2 mx-4">
+                                <img src="images/nasi rogeng.jpg" alt="Thumbnail of a plate of fried rice with a sunny-side-up egg, sliced cucumbers, tomatoes, lime, and garnishes" class="thumbnail">
+                                <img src="images/nasi hainan.jpg" alt="Thumbnail of a plate of fried rice with a sunny-side-up egg, sliced cucumbers, tomatoes, lime, and garnishes" class="thumbnail">
+                                <img src="images/nasi rogeng.jpg" alt="Thumbnail of a plate of fried rice with a sunny-side-up egg, sliced cucumbers, tomatoes, lime, and garnishes" class="thumbnail">
+                                <img src="images/Nasi-Goreng-4.jpg" alt="Thumbnail of a plate of fried rice with a sunny-side-up egg, sliced cucumbers, tomatoes, lime, and garnishes" class="thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Kolom 2 -->
+                <div class="col-md-4">
+                    <div class="p-3">
+                        <div class="details">
+                            <h1>Nasi Goreng</h1>
+                            <p>Diupload pada: 15 - Desember - 2024</p>
+                            <div class="info">
+                                <i class="fas fa-user"></i>
+                                <span>robert12</span>
+                            </div>
+                            <div class="info">
+                                <i class="fas fa-clock"></i>
+                                <span>20 menit</span>
+                                <i class="fas fa-utensils" style="margin-left: 16px;"></i>
+                                <span>5 bahan</span>
+                            </div>
+                            <h2>Bahan - bahan</h2>
+                            <ul>
+                                <li>Nasi</li>
+                                <li>Margarin</li>
+                                <li>Telur</li>
+                                <li>Ikan teri</li>
+                                <li>Bumbu-bumbu</li>
+                            </ul>
+                            <h2>Alat dan perlengkapan</h2>
+                            <ul>
+                                <li>Teflon</li>
+                                <li>Spatula</li>
+                                <li>Minyak secukupnya</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Kolom 3 -->
+                <div class="col-md-4">
+                    <div class="p-3">
+                        <div class="recipe-steps">
+                            <h2>Langkah-Langkah</h2>
+                            <div class="step">
+                                <img src="images/langkah1.jpg" alt="Langkah 1">
+                                <div class="step-content">
+                                    <div class="step-title">Langkah 1</div>
+                                    <div class="step-description">
+                                        Masukan margarin telur dan kondimen lain lalu masak sebentar hingga telurnya setengah matang.
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="step">
+                                <img src="images/langkah2.jpg" alt="Langkah 2">
+                                <div class="step-content">
+                                    <div class="step-title">Langkah 2</div>
+                                    <div class="step-description">
+                                        Masukan nasi lalu masak sebentar dan aduk hingga merata.
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="step">
+                                <img src="images/langkah3.jpg" alt="Langkah 3">
+                                <div class="step-content">
+                                    <div class="step-title">Langkah 3</div>
+                                    <div class="step-description">
+                                        Campurkan bumbu-bumbu dan tambahkan topping opsional seperti sosis, sayur, dan yang lainnya.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          
+          <div class="comment-container">
+            <div class="icons">
+            <div class="left-icons">
+                <i class="bi bi-heart"></i>
+                <i class="bi bi-chat-dots"></i>
+                <i class="bi bi-send"></i>
+            </div>
+            <i class="bi bi-bookmark"></i>
+            </div>
+            <div class="comment-text">
+            Comment
+            </div>
+            <div class="comment-section">
+            <img alt="User avatar" height="50" src="images/chanyeol.jpg" width="50"/>
+            <input id="commentInput" placeholder="Berikan saran mu terbaikmu" type="text"/>
+            </div>
+            <div class="comment-list" id="commentList">
+            </div>
+          </div>
+    
+          <div class="wrapper">
+            <!-- Rating Box -->
+            <div class="box">
+              <h3>Yuk foodies kasih rating untuk resep ini</h3>
+              <div class="stars">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>      
+              <button class="button" style="margin-top: 53px;">Berikan rating</button>
+            </div>
+    
+            <!-- Support Box -->
+            <div class="box">
+              <h3>Yuk foodies kasih Support untuk resep ini</h3>
+              <p>Nominal cepat</p>
+              <div class="coins">
+                <div class="coin">10</div>
+                <div class="coin">50</div>
+                <div class="coin">100</div>
+              </div>
+              <button class="button">Gift koin</button>
+            </div>
+          </div>      
+           
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer text-black pt-5">
+        <div class="container content-container">
+          <div class="row">
+            <div class="col-lg-4">
+              <h5>Foodie</h5>
+              <p>
+                Aplikasi penyedia resep masakan yang menghadirkan inspirasi
+                kuliner unutk semua selera. Dari masakan rumahan hinga kreasi,
+                temukan cara baru untuk menikmati makanan setiap hari.
+              </p>
+            </div>
+            <div class="col-lg-4">
+              <h5>Menu</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resep">Resep</a></li>
+                <li><a href="#kontak">kontak</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4">
+              <h5>Kontak Kami</h5>
+              <p>Alamat: Bandung, Jawa Barat</p>
+              <p>Email:foodieapps@gmail.com</p>
+              <p>Telepon: +62 812 9876 5430</p>
+              <div>
+                <a href="#" class="text-dark me-2"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="#" class="text-dark me-2"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a href="#" class="text-dark"><i class="bi bi-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="text-center pt-3">
+            <p>© 2024 Foodie - Penyedia Resep Masakan. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Link ke Bootstrap JS dan Popper.js (untuk fitur interaktif seperti dropdown dan carousel) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

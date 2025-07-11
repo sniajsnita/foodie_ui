@@ -1,0 +1,229 @@
+body,
+      html {
+        background-color: #ffecbb;
+        font-family: "league spartan", sans-serif;
+        margin: 0;
+      }
+
+      .col-11 {
+        margin-left: 100px; /* Menambahkan margin kiri untuk memberikan ruang di samping sidebar */
+        margin-right: 20px;
+        padding: 20px;
+        width: calc(100% - 80px); /* Menghindari tumpang tindih */
+        overflow-y: auto; /* Agar konten utama scrollable */
+      }
+
+      .sticky-header {
+        position: fixed;
+        padding: 0;
+        top: 0;
+        left: 80px;
+        width: calc(100% - 80px); /* Menghindari tumpang tindih */
+        z-index: 10; /* Supaya elemen ini berada di atas elemen lain */
+        background-color: #ffecbb; /* Tambahkan background agar tidak transparan */
+      }
+
+      .menu-item {
+        text-decoration: none; /* Menghapus garis bawah pada link */
+        color: #6e44c2; /* Mengatur warna teks untuk menu */
+        display: flex; /* Menggunakan flexbox untuk menyusun ikon dan teks secara vertikal */
+        flex-direction: column; /* Menyusun ikon dan teks secara kolom */
+        align-items: center; /* Memusatkan ikon dan teks secara horizontal */
+        margin-bottom: 20px; /* Memberikan jarak antara menu-item */
+      }
+
+      /* Kontainer untuk ikon di menu */
+      .icon-container {
+        width: 50px; /* Lebar kontainer ikon */
+        height: 50px; /* Tinggi kontainer ikon */
+        display: flex; /* Flexbox untuk menyusun ikon di tengah */
+        align-items: center; /* Menjaga ikon tetap di tengah secara vertikal */
+        justify-content: center; /* Memusatkan ikon secara horizontal */
+        margin-bottom: 5px; /* Memberikan jarak antara ikon dan teks */
+      }
+
+      /* Ukuran dan warna ikon di menu */
+      .icon-container i {
+        font-size: 24px; /* Ukuran ikon */
+        color: #6e44c2; /* Warna ikon */
+      }
+
+      /* Teks pada menu item */
+      .menu-item span {
+        font-size: 14px; /* Ukuran teks pada menu */
+        color: #6e44c2; /* Warna teks */
+      }
+
+      /* Efek hover untuk menu item */
+      .menu-item:hover .icon-container {
+        background-color: #d4c8f2; /* Warna latar belakang saat hover */
+        border-radius: 50%; /* Membuat background ikonnya berbentuk lingkaran */
+      }
+
+      .menu-nav {
+        display: flex; /* Menggunakan flexbox untuk menyusun ikon dan teks secara horizontal */
+        align-items: center; /* Memusatkan ikon dan teks secara vertikal */
+      }
+
+      .menu-nav span {
+        font-size: 14px; /* Ukuran teks pada menu */
+        color: #6e44c2; /* Warna teks */
+        margin-left: 5px; /* Memberikan jarak antara ikon dan teks */
+      }
+
+      .icon-cont {
+        width: 50px; /* Lebar kontainer ikon */
+        height: 50px; /* Tinggi kontainer ikon */
+        display: flex; /* Flexbox untuk menyusun ikon di tengah */
+        align-items: center; /* Menjaga ikon tetap di tengah secara vertikal */
+        justify-content: center; /* Memusatkan ikon secara horizontal */
+      }
+
+      /* Ukuran dan warna ikon di menu */
+      .icon-cont i {
+        font-size: 24px; /* Ukuran ikon */
+        color: #6e44c2; /* Warna ikon */
+      }
+
+      .menu-nav span {
+        font-size: 18px; /* Ukuran teks pada menu */
+        color: #6e44c2; /* Warna teks */
+        margin-right: 15px;
+      }
+
+      /* Efek hover untuk menu item */
+      .menu-nav:hover .icon-container {
+        background-color: #d4c8f2; /* Warna latar belakang saat hover */
+        border-radius: 50%; /* Membuat background ikonnya berbentuk lingkaran */
+      }
+
+      .nav-profile:hover {
+        background-color: #d4c8f2;
+        border-radius: 15px;
+      }
+
+      @media (max-width: 768px) {
+        .sticky-header {
+          left: 0;
+          width: 100%;
+        }
+
+        .form-control {
+          width: 100%;
+        }
+
+        .nav-profile span {
+          display: none; /* Sembunyikan nama pengguna di perangkat kecil */
+        }
+      }
+
+      @media (max-width: 576px) {
+        .sticky-header {
+          padding: 10px; /* Mengurangi padding untuk menghemat ruang */
+        }
+
+        .sticky-header .d-flex {
+          flex-direction: column; /* Menumpuk elemen secara vertikal */
+          align-items: center; /* Rata tengah */
+        }
+
+        .sticky-header .d-flex.align-items-center {
+          margin-bottom: 10px; /* Memberikan sedikit jarak antar baris */
+        }
+
+        .form-control {
+          width: 100%; /* Pastikan input pencarian menggunakan seluruh lebar */
+          margin-bottom: 10px; /* Menambahkan ruang bawah pada input */
+        }
+
+        .nav-profile span {
+          display: none; /* Sembunyikan nama pengguna di perangkat kecil */
+        }
+      }
+
+
+      .container {
+      background-color: #ffff;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 6px 4px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 800px;
+    margin-top: 100px;  
+}
+
+.title {
+    font-weight: bold;
+    font-size: 24px;
+}
+.subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.total-payment {
+    font-size: 18px;
+    margin-top: 20px;
+}
+.amount {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+.qr-code {
+    margin: 20px 0;
+    text-align: center;
+}
+.instruction {
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: center;
+}
+.detail-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.btn-upload {
+    background-color: #00cfff;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.btn-upload:hover {
+    background-color: #00b3e6;
+}
+.divider {
+    border-top: 1px solid #d3c09b;
+    margin: 10px 0;
+}
+
+.file-upload {
+    margin-top: 10px;
+}
+.file-format {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #6c757d;
+}
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #555;
+  font-size: 0.9rem;
+  margin-top: 30px;
+  margin-left: 100px;
+  margin-right: 30px;
+}
+
+.content-container {
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}

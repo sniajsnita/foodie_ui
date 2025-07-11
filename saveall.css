@@ -1,0 +1,126 @@
+
+/* Kontainer kartu */
+.card-container {
+  padding: 50px;
+  gap: 30px; /* Jarak antar kartu */
+  display: flex; /* Mengatur elemen di dalamnya agar menggunakan layout flexbox */
+  align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+  justify-content: center; /* Menyelaraskan elemen secara horizontal di tengah */
+}
+
+/* Setelan kartu */
+.card {
+  background-color: #fff;
+  border: 5px solid black;
+  border-radius: 10px;
+  border-color: black;
+  border-width: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+.card:hover {
+  background-color: #e7e7e7;
+}
+
+/* Header kartu */
+.card-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f5faff; /* Warna latar header */
+}
+
+/* Gambar profil */
+.profile-picture {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Nama pengguna */
+.username {
+  font-weight: bold;
+  font-size: 12px;
+  color: #333;
+}
+
+/* Gambar utama */
+.card-image {
+  width: 85%; /* Lebar gambar 80% dari container */
+  height: auto;
+  aspect-ratio: 1 / 1; /* Menjaga rasio 1:1 */
+  object-fit: cover; /* Memastikan gambar terpotong dengan baik */
+  margin: 0 auto; /* Mengatur gambar ke tengah */
+  display: block;
+  border-radius: 5px; /* Tambahkan border radius untuk estetika */
+  margin-top: 20px;
+}
+
+/* Body kartu */
+.card-body {
+  padding: 5px;
+}
+
+/* Ikon */
+.icons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.icons-eye {
+  display: flex;
+  margin-bottom: 5px;
+  width: 10px;
+  height: auto;
+  color: #555;
+}
+
+.icons span {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Caption */
+.caption {
+  font-size: 14px;
+  color: #555;
+}
+
+.icons-eye {
+  display: flex;
+  margin-bottom: 5px;
+  width: 10px;
+  height: auto;
+  color: #555;
+}
+
+/* Media Queries untuk layar lebih kecil */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column; /* Tumpukan kartu secara vertikal */
+    align-items: center; /* Pusatkan kartu */
+  }
+
+  .card {
+    width: 90%; /* Kartu memenuhi 90% lebar layar */
+  }
+}
+
+@media (max-width: 480px) {
+  .username {
+    font-size: 10px; /* Kurangi ukuran teks username */
+  }
+
+  .caption {
+    font-size: 12px; /* Kurangi ukuran teks caption */
+  }
+
+  .card {
+    width: 100%; /* Kartu memenuhi seluruh lebar layar */
+  }
+}

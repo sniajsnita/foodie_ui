@@ -1,0 +1,356 @@
+/* Reset margin dan padding */
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+/* Gaya latar belakang utama */
+body {
+  background: linear-gradient(to bottom, #6499e9 10%, #ffffff 100%);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container utama */
+.container-utama {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  position: relative;
+}
+/* Gaya teks */
+.text-section {
+  color: #000; /* Warna teks hitam */
+  font-size: 0.5rem; /* Ukuran teks besar */
+  font-weight: bold;
+}
+
+.object-fit-md-contain {
+  width: 60%; /* Lebar gambar akan menyesuaikan dengan ukuran elemen secara horizontal */
+  height: auto; /* Tinggi gambar disesuaikan proporsional */
+}
+
+.hero-container {
+  display: flex;
+  align-items: center; /* Vertikal rata tengah */
+  justify-content: space-between; /* Spasi di antara teks dan gambar */
+  height: 80vh; /* Kurangi tinggi hero */
+  border-radius: 10px;
+}
+
+.button {
+  text-decoration: none;
+  background-color: #6499e9;
+  color: black;
+  /* border: 2px solid #6499e9; */
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  /* transition: background-color 0.3s ease; */
+}
+.button:hover {
+  /* background-color: #a3e3f0; */
+  transform: scale(0.95);
+}
+.image-section {
+  display: flex;
+  justify-content: center; /* Gambar berada di tengah secara horizontal */
+  align-items: center; /* Gambar berada di tengah secara vertikal */
+  height: 100%; /* Tinggi penuh sesuai container */
+}
+
+.image-section img {
+  margin: 0; /* Hilangkan margin default */
+  padding: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+.navbar-nav .nav-link {
+  color: #333;
+  font-weight: 500;
+  margin-right: 20px;
+}
+.navbar-nav .nav-link:hover {
+  color: #a3e3f0;
+}
+.navbar-brand img {
+  height: 40px;
+}
+
+
+
+.food-categories {
+  display: flex;
+  flex-wrap: wrap; /* Membungkus elemen ke baris baru */
+  gap: 5px; /* Menambahkan jarak antar kategori */
+  justify-content: space-evenly; /* Menjaga jarak yang merata antar kategori */
+}
+
+.food-category {
+  display: flex;
+  flex-direction: row;
+  /*Menempatkangambardanteksdisamping*/
+  align-items: center;
+  /*Menjagaagargambardantekssejajarsecaravertikal*/
+  padding: 10px;
+  /*Menambahkanpaddingagarkontentidakterlalurapat*/
+  text-align: center;
+  border: 1px solid #ddd;
+  /*Menambahkanborder(opsional)*/
+  border-radius: 30px;
+}
+
+.food-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 255, 0.5);
+}
+.food-category img {
+  width: 30px;
+  height: 30px;
+}
+.food-category span {
+  padding-left: 1px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+/* Ukuran foto lebih kecil */
+#kategori img {
+  width: 150px; /* Mengatur lebar gambar */
+  height: auto; /* Menjaga aspek rasio gambar */
+  object-fit: contain; /* Menjaga gambar agar tetap terlihat rapi */
+  margin: 0 auto; /* Untuk membuat gambar berada di tengah jika diperlukan */
+}
+
+/* Logo */
+.logo-section img {
+  width: 150px; /*logo */
+  border-radius: 50%; /* Membuat logo bulat */
+  margin-right: 30px; /* Jarak logo ke teks */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan */
+}
+
+/* Teks di sebelah kanan */
+.text-section {
+  max-width: 600px; /* Batas lebar teks */
+}
+
+.text-section h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.text-section p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #555;
+  font-size: 0.9rem;
+  margin-top: 30px;
+}
+
+.content-container {
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Kategori */
+.category-header {
+  margin-top: 30px;
+}
+
+.category-header h1 {
+  font-size: 2.5rem;
+}
+
+.category-card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f5faff; /* Warna latar belakang */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  width: 100%; /* Lebar 100% agar menyesuaikan dengan kolom Bootstrap */
+  max-width: 250px; /* Lebar maksimum */
+  height: 75px;
+  margin: 0 auto; /* Agar berada di tengah kolom */
+  text-align: center; /* Menjaga teks di dalam kartu agar terpusat */
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 255, 0.5);
+}
+
+.category-card img {
+  width: 50px; /* Ukuran ikon */
+  height: 50px;
+  margin-left: 10px; /* Margin kanan untuk memindahkan gambar sedikit ke kanan */
+}
+
+.category-card .info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5px;
+  /* justify-content: center; */
+}
+
+.category-card .info h5 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.category-card .info p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.category-card .arrow {
+  font-size: 24px;
+  color: #007bff; /* Warna panah */
+}
+
+/* Kontainer kartu */
+.card-container {
+  padding: 50px;
+  gap: 30px; /* Jarak antar kartu */
+  display: flex; /* Mengatur elemen di dalamnya agar menggunakan layout flexbox */
+  align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+  justify-content: center; /* Menyelaraskan elemen secara horizontal di tengah */
+}
+
+/* Setelan kartu */
+.card {
+  background-color: #fff;
+  border: 5px solid black;
+  border-radius: 10px;
+  border-color: black;
+  border-width: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+.card:hover {
+  background-color: #e7e7e7;
+}
+
+/* Header kartu */
+.card-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f5faff; /* Warna latar header */
+}
+
+/* Gambar profil */
+.profile-picture {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Nama pengguna */
+.username {
+  font-weight: bold;
+  font-size: 12px;
+  color: #333;
+}
+
+/* Gambar utama */
+.card-image {
+  width: 85%; /* Lebar gambar 80% dari container */
+  height: auto;
+  aspect-ratio: 1 / 1; /* Menjaga rasio 1:1 */
+  object-fit: cover; /* Memastikan gambar terpotong dengan baik */
+  margin: 0 auto; /* Mengatur gambar ke tengah */
+  display: block;
+  border-radius: 5px; /* Tambahkan border radius untuk estetika */
+  margin-top: 20px;
+}
+
+/* Body kartu */
+.card-body {
+  padding: 5px;
+}
+
+/* Ikon */
+.icons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.icons-eye {
+  text-align: left;
+  /* display: flex; */
+  margin-bottom: 5px;
+  width: 10px;
+  height: auto;
+  color: #555;
+}
+
+.icons span {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Caption */
+.caption {
+  font-weight: bold;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Media Queries untuk layar lebih kecil */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column; /* Tumpukan kartu secara vertikal */
+    align-items: center; /* Pusatkan kartu */
+  }
+
+  .card {
+    width: 90%; /* Kartu memenuhi 90% lebar layar */
+  }
+}
+
+@media (max-width: 480px) {
+  .username {
+    font-size: 10px; /* Kurangi ukuran teks username */
+  }
+
+  .caption {
+    font-size: 12px; /* Kurangi ukuran teks caption */
+  }
+
+  .card {
+    width: 100%; /* Kartu memenuhi seluruh lebar layar */
+  }
+}

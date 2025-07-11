@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desain Teks dan Foto</title>
+    <link rel="stylesheet" href="cover.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Satisfy&amp;display=swap"
+    />
+  </head>
+  <body>
+    <div class="container-utama mt-4">
+      <div class="hero-container row align-items-center">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <a class="navbar-brand" href="#">
+              <img
+                alt="Foodie"
+                height="40"
+                src="images/Logobaru.png"
+                width="40"
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#resep">Resep</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#kontak">Kontak</a>
+                </li>
+              </ul>
+              <a href="login.html" class="button">Login</a>
+            </div>
+          </div>
+        </nav>
+        <!-- Bagian teks -->
+        <section id="hero-banner" class="col-md-6">
+          <p style="font-size: 52px; font-weight: bold">Foodie</p>
+          <p
+            style="
+              max-width: 600px;
+              font-family: 'Satisfy', cursive;
+              font-size: 30px;
+              color: #f09133;
+            "
+          >
+            find or create your own food recipe
+          </p>
+          <div class="food-categories">
+            <div class="food-category">
+              <img alt="Ayam" src="images/christmas-dinner.png" />
+              <span> Lauk </span>
+            </div>
+            <div class="food-category">
+              <img alt="Frensch Fries Icon" src="images/french-fries.png" />
+              <span> Cemilan </span>
+            </div>
+            <div class="food-category">
+              <img alt="Dessert Icon" src="images/donut.png" />
+              <span> Dessert </span>
+            </div>
+            <div class="food-category">
+              <img alt="Drink Icon" src="images/drink.png" />
+              <span> Minuman </span>
+            </div>
+            <div class="food-category">
+              <img alt="Dessert Icon" src="images/salad.png" />
+              <span> Buah </span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Bagian gambar -->
+        <div class="image-section col-md-6 text-center">
+          <img src="images/Landing page web.png" alt="Gambar Makanan" />
+        </div>
+      </div>
+    </div>
+
+    <section id="about" class="pt-1 text-center">
+      <h1 class="text-info-emphasis fw-bold pb-3">About</h1>
+      <div class="container-fluid">
+        <div
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4"
+        >
+          <!-- Kartu 1 -->
+          <div class="col">
+            <div class="category-card">
+              <img
+                src="images/coverkoin.png"
+                alt="fitur koin"
+                class="img-fluid"
+              />
+              <div class="info">
+                <h5>KOIN</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kartu 2 -->
+          <div class="col">
+            <div class="category-card">
+              <img
+                src="images/reseplengkap.png"
+                alt="fitur ressep"
+                class="img-fluid"
+              />
+              <div class="info">
+                <h5>RESEP</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kartu 3 -->
+          <div class="col">
+            <div class="category-card">
+              <img
+                src="images/komunitas.png"
+                alt="komunitas"
+                class="img-fluid"
+              />
+              <div class="info">
+                <h5>KOMUNITAS</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kartu 4 -->
+          <div class="col">
+            <div class="category-card">
+              <img src="images/ebook.png" alt="e-book" class="img-fluid" />
+              <div class="info">
+                <h5>E-BOOK</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resep" class="pt-5 text-center">
+      <h1 class="text-info-emphasis fw-bold">Resep</h1>
+      <div class="card-container">
+        <!-- Kartu 1 -->
+        <div class="card">
+          <div class="card-header">
+            <img
+              src="images/chef jaemin.jpg"
+              alt="Profile Picture"
+              class="profile-picture"
+            />
+            <span class="username">Jaemin</span>
+          </div>
+          <img
+            src="images/smoothie-bowl.jpg"
+            alt="Smoothie Bowl"
+            class="card-image"
+          />
+          <div class="card-body">
+            <div class="icons">
+              <span style="font-size: 12px;"><i class="bi bi-heart"></i>14rb</span>
+              <span style="font-size: 12px;"><i class="bi bi-chat"></i>7,4rb</span>
+              <span style="font-size: 12px;"><i class="bi bi-send"></i>4,6rb</span>                                       
+            </div>
+            <p class="caption">Smoothie Bowl</p>
+            <div style="text-align: left; font-size: 12px;">
+              <span class="icons-eye"><i class="bi bi-eye">93rb</i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu 2 -->
+        <div class="card">
+          <div class="card-header">
+            <img
+              src="images/chef ainun.jpg"
+              alt="Profile Picture"
+              class="profile-picture"
+            />
+            <span class="username">Ainun</span>
+          </div>
+          <img
+            src="images/nasi hainan.jpg"
+            alt="Nasi Hainan"
+            class="card-image"
+          />
+          <div class="card-body">
+            <div class="icons">
+              <span style="font-size: 12px;"><i class="bi bi-heart"></i>10,7rb</span>
+              <span style="font-size: 12px;"><i class="bi bi-chat"></i>8,9rb</span>
+              <span style="font-size: 12px;"><i class="bi bi-send"></i>3,2</span>
+            </div>
+            <p class="caption">Nasi Hainan</p>
+            <div style="text-align: left; font-size: 12px;">
+              <span class="icons-eye"><i class="bi bi-eye">47rb</i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu 3 -->
+        <div class="card">
+          <div class="card-header">
+            <img
+              src="images/sehun.jpg"
+              alt="Profile Picture"
+              class="profile-picture"
+            />
+            <span class="username">Sehun</span>
+          </div>
+          <img src="images/dawet.jpg" alt="Dawet" class="card-image" />
+          <div class="card-body">
+            <div class="icons">
+              <span style="font-size: 12px;"><i class="bi bi-heart"></i>34,3rb</span>
+              <span style="font-size: 12px;"><i class="bi bi-chat"></i>4rb</span>
+              <span style="font-size: 12px;"><i class="bi bi-send"></i>5rb</span>
+            </div>
+            <p class="caption">Dawet</p>
+            <div style="text-align: left; font-size: 12px;">
+              <span class="icons-eye"><i class="bi bi-eye">86rb</i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu 4 -->
+        <div class="card">
+          <div class="card-header">
+            <img
+              src="images/chef suho.jpg"
+              alt="Profile Picture"
+              class="profile-picture"
+            />
+            <span class="username">Suho</span>
+          </div>
+          <img src="images/ramen.jpg" alt="Ramen" class="card-image" />
+          <div class="card-body">
+            <div class="icons">
+              <span style="font-size: 12px;"><i class="bi bi-heart"></i>12,6rb</span>
+              <span style="font-size: 12px;"><i class="bi bi-chat"></i>1,8rb</span>
+              <span style="font-size: 12px;"><i class="bi bi-send"></i>2,4rb</span>
+            </div>
+            <p class="caption">Ramen</p>
+            <div style="text-align: left; font-size: 12px;">
+              <span class="icons-eye"><i class="bi bi-eye">87rb</i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer start -->
+    <!-- Footer -->
+    <footer>
+      <div class="footer text-black pt-5">
+        <div class="container content-container">
+          <div class="row">
+            <div class="col-lg-4">
+              <h5>Foodie</h5>
+              <p>
+                Aplikasi penyedia resep masakan yang menghadirkan inspirasi
+                kuliner unutk semua selera. Dari masakan rumahan hinga kreasi,
+                temukan cara baru untuk menikmati makanan setiap hari.
+              </p>
+            </div>
+            <div class="col-lg-4">
+              <h5>Menu</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resep">Resep</a></li>
+                <li><a href="#kontak">kontak</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4">
+              <h5>Kontak Kami</h5>
+              <p>Alamat: Bandung, Jawa Barat</p>
+              <p>Email:foodieapps@gmail.com</p>
+              <p>Telepon: +62 812 9876 5430</p>
+              <div>
+                <a href="#" class="text-dark me-2"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="#" class="text-dark me-2"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a href="#" class="text-dark"><i class="bi bi-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="text-center pt-3">
+            <p>© 2024 Foodie - Penyedia Resep Masakan. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+  </body>
+</html>

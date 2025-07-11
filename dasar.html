@@ -1,0 +1,276 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Foodie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body,
+      html {
+        background-color: #f9f9f9f9;
+        font-family: "league spartan", sans-serif;
+        margin: 0;
+      }
+
+      .col-11 {
+        margin-left: 100px; /* Menambahkan margin kiri untuk memberikan ruang di samping sidebar */
+        margin-right: 20px;
+        padding: 20px;
+        width: calc(100% - 80px); /* Menghindari tumpang tindih */
+        overflow-y: auto; /* Agar konten utama scrollable */
+      }
+
+      .sticky-header {
+        position: fixed;
+        padding: 0;
+        top: 0;
+        left: 80px;
+        width: calc(100% - 80px); /* Menghindari tumpang tindih */
+        z-index: 10; /* Supaya elemen ini berada di atas elemen lain */
+        background-color: #f9f9f9f9; /* Tambahkan background agar tidak transparan */
+      }
+
+      .menu-item {
+        text-decoration: none; /* Menghapus garis bawah pada link */
+        color: #6e44c2; /* Mengatur warna teks untuk menu */
+        display: flex; /* Menggunakan flexbox untuk menyusun ikon dan teks secara vertikal */
+        flex-direction: column; /* Menyusun ikon dan teks secara kolom */
+        align-items: center; /* Memusatkan ikon dan teks secara horizontal */
+        margin-bottom: 20px; /* Memberikan jarak antara menu-item */
+      }
+
+      /* Kontainer untuk ikon di menu */
+      .icon-container {
+        width: 50px; /* Lebar kontainer ikon */
+        height: 50px; /* Tinggi kontainer ikon */
+        display: flex; /* Flexbox untuk menyusun ikon di tengah */
+        align-items: center; /* Menjaga ikon tetap di tengah secara vertikal */
+        justify-content: center; /* Memusatkan ikon secara horizontal */
+        margin-bottom: 5px; /* Memberikan jarak antara ikon dan teks */
+      }
+
+      /* Ukuran dan warna ikon di menu */
+      .icon-container i {
+        font-size: 24px; /* Ukuran ikon */
+        color: #6e44c2; /* Warna ikon */
+      }
+
+      /* Teks pada menu item */
+      .menu-item span {
+        font-size: 14px; /* Ukuran teks pada menu */
+        color: #6e44c2; /* Warna teks */
+      }
+
+      /* Efek hover untuk menu item */
+      .menu-item:hover .icon-container {
+        background-color: #d4c8f2; /* Warna latar belakang saat hover */
+        border-radius: 50%; /* Membuat background ikonnya berbentuk lingkaran */
+      }
+
+      .menu-nav {
+        display: flex; /* Menggunakan flexbox untuk menyusun ikon dan teks secara horizontal */
+        align-items: center; /* Memusatkan ikon dan teks secara vertikal */
+      }
+
+      .menu-nav span {
+        font-size: 14px; /* Ukuran teks pada menu */
+        color: #6e44c2; /* Warna teks */
+        margin-left: 5px; /* Memberikan jarak antara ikon dan teks */
+      }
+
+      .icon-cont {
+        width: 50px; /* Lebar kontainer ikon */
+        height: 50px; /* Tinggi kontainer ikon */
+        display: flex; /* Flexbox untuk menyusun ikon di tengah */
+        align-items: center; /* Menjaga ikon tetap di tengah secara vertikal */
+        justify-content: center; /* Memusatkan ikon secara horizontal */
+      }
+
+      /* Ukuran dan warna ikon di menu */
+      .icon-cont i {
+        font-size: 24px; /* Ukuran ikon */
+        color: #6e44c2; /* Warna ikon */
+      }
+
+      .menu-nav span {
+        font-size: 18px; /* Ukuran teks pada menu */
+        color: #6e44c2; /* Warna teks */
+        margin-right: 15px;
+      }
+
+      /* Efek hover untuk menu item */
+      .menu-nav:hover .icon-container {
+        background-color: #d4c8f2; /* Warna latar belakang saat hover */
+        border-radius: 50%; /* Membuat background ikonnya berbentuk lingkaran */
+      }
+
+      .nav-profile:hover {
+        background-color: #d4c8f2;
+        border-radius: 15px;
+      }
+
+      @media (max-width: 768px) {
+        .sticky-header {
+          left: 0;
+          width: 100%;
+        }
+
+        .form-control {
+          width: 100%;
+        }
+
+        .nav-profile span {
+          display: none; /* Sembunyikan nama pengguna di perangkat kecil */
+        }
+      }
+
+      @media (max-width: 576px) {
+        .sticky-header {
+          padding: 10px; /* Mengurangi padding untuk menghemat ruang */
+        }
+
+        .sticky-header .d-flex {
+          flex-direction: column; /* Menumpuk elemen secara vertikal */
+          align-items: center; /* Rata tengah */
+        }
+
+        .sticky-header .d-flex.align-items-center {
+          margin-bottom: 10px; /* Memberikan sedikit jarak antar baris */
+        }
+
+        .form-control {
+          width: 100%; /* Pastikan input pencarian menggunakan seluruh lebar */
+          margin-bottom: 10px; /* Menambahkan ruang bawah pada input */
+        }
+
+        .nav-profile span {
+          display: none; /* Sembunyikan nama pengguna di perangkat kecil */
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- sidebar start -->
+        <div class="col-1 flex h-screen p-0 position-fixed">
+          <div
+            class="bg-cyan-200 w-20 flex flex-col items-center py-4 space-y-8 rounded-r-3xl"
+          >
+            <div class="flex flex-col items-center space-y-4">
+              <a href="#" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-house"></i>
+                </div>
+                <span>Beranda</span>
+              </a>
+              <a href="#" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-people"></i>
+                </div>
+                <span>Komunitas</span>
+              </a>
+              <a href="#" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-chat-left-text"></i>
+                </div>
+                <span>Obrolan</span>
+              </a>
+              <a href="#" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-bookmark"></i>
+                </div>
+                <span>Bookmark</span>
+              </a>
+              <a href="#" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-plus-square"></i>
+                </div>
+                <span>Buat</span>
+              </a>
+              <a href="#" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-gear"></i>
+                </div>
+                <span>Pengaturan</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- sidebar end -->
+
+        <!-- Main Content start -->
+        <div class="col-11 flex-1 p-0">
+          <!-- header start -->
+          <div class="flex items-center justify-between sticky-header">
+            <div class="flex items-center space-x-2">
+              <span class="text-xl font-bold px-2">foodie</span>
+              <div class="koin-nav text-center p-2">
+                <a href="homekoin.html">
+                  <div class="bg-yellow-400 w-8 h-8 flex items-center justify-center rounded-full mx-auto">
+                    <img src="images/Koin.png" alt="">
+                  </div>
+                  <p style="font-size: 12px;">12000</p>
+                </a>
+              </div>    
+            </div>
+
+            <div class="flex items-center space-x-4">
+              <div class="relative">
+                <input
+                  class="w-96 h-10 pl-4 pr-10 rounded-full border border-black"
+                  placeholder="Search"
+                  type="text"
+                />
+                <i
+                  class="fas fa-search absolute right-3 top-1/2 transform -translate-y-1/2"
+                ></i>
+              </div>
+
+              <a href="#" class="menu-nav">
+                <div class="icon-container">
+                  <i class="bi bi-bell"></i>
+                </div>
+              </a>
+
+              <div class="nav-profile">
+                <a href="#" class="menu-nav">
+                  <div class="icon-container">
+                    <i class="bi bi-person-circle"></i>
+                  </div>
+                  <span>Chanyeol</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- header end -->
+           
+        </div>
+      </div>
+    </div>
+    <!-- Link ke Bootstrap JS dan Popper.js (untuk fitur interaktif seperti dropdown dan carousel) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

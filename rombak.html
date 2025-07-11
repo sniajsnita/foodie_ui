@@ -1,0 +1,476 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Foodie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body,
+      html {
+        background-color: #f9f9f9;
+        font-family: "league spartan", sans-serif;
+        margin: 0;
+      }
+
+      .col-11 {
+        margin-left: 100px; /* Menambahkan margin kiri untuk memberikan ruang di samping sidebar */
+        margin-right: 20px;
+        padding: 20px;
+        width: calc(100% - 80px); /* Menghindari tumpang tindih */
+        overflow-y: auto; /* Agar konten utama scrollable */
+      }
+
+      .sticky-header {
+        position: fixed;
+        padding: 0;
+        top: 0;
+        left: 80px;
+        width: calc(100% - 80px); /* Menghindari tumpang tindih */
+        z-index: 10; /* Supaya elemen ini berada di atas elemen lain */
+        background-color: #f9f9f9; /* Tambahkan background agar tidak transparan */
+      }
+
+      .menu-item {
+        text-decoration: none; /* Menghapus garis bawah pada link */
+        color: #6e44c2; /* Mengatur warna teks untuk menu */
+        display: flex; /* Menggunakan flexbox untuk menyusun ikon dan teks secara vertikal */
+        flex-direction: column; /* Menyusun ikon dan teks secara kolom */
+        align-items: center; /* Memusatkan ikon dan teks secara horizontal */
+        margin-bottom: 20px; /* Memberikan jarak antara menu-item */
+      }
+
+      /* Kontainer untuk ikon di menu */
+      .icon-container {
+        width: 50px; /* Lebar kontainer ikon */
+        height: 50px; /* Tinggi kontainer ikon */
+        display: flex; /* Flexbox untuk menyusun ikon di tengah */
+        align-items: center; /* Menjaga ikon tetap di tengah secara vertikal */
+        justify-content: center; /* Memusatkan ikon secara horizontal */
+        margin-bottom: 5px; /* Memberikan jarak antara ikon dan teks */
+      }
+
+      /* Ukuran dan warna ikon di menu */
+      .icon-container i {
+        font-size: 24px; /* Ukuran ikon */
+        color: #6e44c2; /* Warna ikon */
+      }
+
+      /* Teks pada menu item */
+      .menu-item span {
+        font-size: 14px; /* Ukuran teks pada menu */
+        color: #6e44c2; /* Warna teks */
+      }
+
+      /* Efek hover untuk menu item */
+      .menu-item:hover .icon-container {
+        background-color: #d4c8f2; /* Warna latar belakang saat hover */
+        border-radius: 50%; /* Membuat background ikonnya berbentuk lingkaran */
+      }
+
+      .menu-nav {
+        display: flex; /* Menggunakan flexbox untuk menyusun ikon dan teks secara horizontal */
+        align-items: center; /* Memusatkan ikon dan teks secara vertikal */
+      }
+
+      .menu-nav span {
+        font-size: 14px; /* Ukuran teks pada menu */
+        color: #6e44c2; /* Warna teks */
+        margin-left: 5px; /* Memberikan jarak antara ikon dan teks */
+      }
+
+      .icon-cont {
+        width: 50px; /* Lebar kontainer ikon */
+        height: 50px; /* Tinggi kontainer ikon */
+        display: flex; /* Flexbox untuk menyusun ikon di tengah */
+        align-items: center; /* Menjaga ikon tetap di tengah secara vertikal */
+        justify-content: center; /* Memusatkan ikon secara horizontal */
+      }
+
+      /* Ukuran dan warna ikon di menu */
+      .icon-cont i {
+        font-size: 24px; /* Ukuran ikon */
+        color: #6e44c2; /* Warna ikon */
+      }
+
+      .menu-nav span {
+        font-size: 18px; /* Ukuran teks pada menu */
+        color: #6e44c2; /* Warna teks */
+        margin-right: 15px;
+      }
+
+      /* Efek hover untuk menu item */
+      .menu-nav:hover .icon-container {
+        background-color: #d4c8f2; /* Warna latar belakang saat hover */
+        border-radius: 50%; /* Membuat background ikonnya berbentuk lingkaran */
+      }
+
+      .nav-profile:hover {
+        background-color: #d4c8f2;
+        border-radius: 15px;
+      }
+
+      @media (max-width: 768px) {
+        .sticky-header {
+          left: 0;
+          width: 100%;
+        }
+
+        .form-control {
+          width: 100%;
+        }
+
+        .nav-profile span {
+          display: none; /* Sembunyikan nama pengguna di perangkat kecil */
+        }
+      }
+
+      @media (max-width: 576px) {
+        .sticky-header {
+          padding: 10px; /* Mengurangi padding untuk menghemat ruang */
+        }
+
+        .sticky-header .d-flex {
+          flex-direction: column; /* Menumpuk elemen secara vertikal */
+          align-items: center; /* Rata tengah */
+        }
+
+        .sticky-header .d-flex.align-items-center {
+          margin-bottom: 10px; /* Memberikan sedikit jarak antar baris */
+        }
+
+        .form-control {
+          width: 100%; /* Pastikan input pencarian menggunakan seluruh lebar */
+          margin-bottom: 10px; /* Menambahkan ruang bawah pada input */
+        }
+
+        .nav-profile span {
+          display: none; /* Sembunyikan nama pengguna di perangkat kecil */
+        }
+      }
+
+        .pembayaran{
+          margin-top: 100px;
+          margin-bottom: 100px;
+          margin-left: 50px;
+          margin-right: 50px;
+          /* text-align: center; */
+        }
+
+        /* Gaya untuk judul */
+        .pembayaran h2 {
+          font-size: 1.2em;
+          margin-bottom: 10px;
+          font-weight: bold;
+          /* text-align: center; */
+          padding: 10px;
+        }
+
+        /* Kontainer untuk kartu nominal */
+        .nominal-container {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        padding: 20px;
+        border-width: 2px;
+       
+        }
+
+        /* Kartu untuk setiap nominal */
+        .nominal-card {
+            width: 120px;
+            padding: 3px;
+            background-color: #6499e9;
+            border: 2px solid #6499e9;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .nominal-card img{
+            background-color: white;
+        }
+
+        /* Efek hover pada kartu nominal */
+        .nominal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 255, 0.5 );
+            color: white;
+        }
+
+        /* Tampilan jumlah koin */
+        .nominal-card .coins {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        /* Tampilan harga */
+        .nominal-card .price {
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+
+        /* Gambar dalam kartu nominal */
+        .nominal-card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* Kontainer untuk metode pembayaran */
+        .pembayaran .payment-container {
+            display: flex;
+            gap: 10px;
+            /* text-align: center;
+            justify-content: center; */
+        }
+
+        /* Tombol metode pembayaran */
+        .payment-button {
+            text-align: right;
+            border: 1px solid #6499e9;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: flex;
+            /* align-items: right;
+            justify-content: right; */
+            transition: all 0.3s ease;
+        }
+
+        .payment-container{
+          border-radius: 15px;
+          padding: 20px;
+          border-width: 2px;
+        }
+
+        /* Efek hover pada metode pembayaran */
+        .payment-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 255, 0.5 );
+            color: white;
+        }
+
+        /* Gambar pada tombol pembayaran */
+        .payment-button img {
+            max-width: 60px;
+            height: auto;
+        }
+
+        .button-submit{
+            text-align: center;
+            justify-content: center;
+            margin-top: 10px;
+            background-color: #6499e9;
+            
+        }
+
+        .button-container{
+            text-align: right;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* Gaya untuk tombol */
+        .right-button {
+        padding: 10px 20px; /* Mengatur ukuran dalam tombol */
+        font-size: 16px; /* Ukuran teks tombol */
+        color: #fff; /* Warna teks tombol */
+        background-color: #6499e9; /* Warna latar belakang tombol */
+        border: none; /* Menghilangkan border tombol */
+        border-radius: 5px; /* Membuat sudut tombol melengkung */
+        cursor: pointer; /* Menampilkan pointer saat tombol dihover */
+        transition: background-color 0.3s; /* Menambahkan efek transisi pada hover */
+        }
+        .right-button:hover {
+          transform: scale(0.95);
+          background-color: #3b5b8b; /* Warna latar belakang tombol */
+        }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- sidebar start -->
+        <div class="col-1 flex h-screen p-0 position-fixed">
+          <div
+            class="bg-cyan-200 w-20 flex flex-col items-center py-4 space-y-8 rounded-r-3xl"
+          >
+            <div class="flex flex-col items-center space-y-4">
+              <a href="#" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-house"></i>
+                </div>
+                <span>Beranda</span>
+              </a>
+              <a href="#" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-people"></i>
+                </div>
+                <span>Komunitas</span>
+              </a>
+              <a href="#" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-chat-left-text"></i>
+                </div>
+                <span>Obrolan</span>
+              </a>
+              <a href="#" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-bookmark"></i>
+                </div>
+                <span>Bookmark</span>
+              </a>
+              <a href="#" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-plus-square"></i>
+                </div>
+                <span>Buat</span>
+              </a>
+              <a href="#" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-gear"></i>
+                </div>
+                <span>Pengaturan</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- sidebar end -->
+
+        <!-- Main Content start -->
+        <div class="col-11 flex-1 p-0">
+          <!-- header start -->
+          <div class="flex items-center justify-between sticky-header">
+            <div class="flex items-center space-x-2">
+              <span class="text-xl font-bold px-2">foodie</span>
+              <div
+                class="bg-yellow-400 w-8 h-8 flex items-center justify-center rounded-full"
+              >
+                <span class="text-xl font-bold">F</span>
+              </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+              <div class="relative">
+                <input
+                  class="w-96 h-10 pl-4 pr-10 rounded-full border border-black"
+                  placeholder="Search"
+                  type="text"
+                />
+                <i
+                  class="fas fa-search absolute right-3 top-1/2 transform -translate-y-1/2"
+                ></i>
+              </div>
+
+              <a href="#" class="menu-nav">
+                <div class="icon-container">
+                  <i class="bi bi-bell"></i>
+                </div>
+              </a>
+
+              <div class="nav-profile">
+                <a href="#" class="menu-nav">
+                  <div class="icon-container">
+                    <i class="bi bi-person-circle"></i>
+                  </div>
+                  <span>Chanyeol</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- header end -->
+
+
+          <div class="pembayaran">
+            <h2>Pilih Nominal Koin</h2>
+            <div class="nominal-container">
+              <div class="nominal-card">
+                  <img src="images/koin 1.png" alt="Koin">
+                  <div class="price">Rp 1.000</div>
+              </div>
+              <div class="nominal-card">
+                  <img src="images/koin 2.png" alt="Koin">
+                  <div class="price">Rp 2.000</div>
+              </div>
+              <div class="nominal-card">
+                  <img src="images/koin 3.png" alt="Koin">
+                  <div class="price">Rp 5.000</div>
+              </div>
+              <div class="nominal-card">
+                  <img src="images/koin 4.png" alt="Koin">
+                  <div class="price">Rp 10.000</div>
+              </div>
+              <div class="nominal-card">
+                  <img src="images/koin 5.png" alt="Koin">
+                  <div class="price">Rp 15.000</div>
+              </div>
+              <div class="nominal-card">
+                <img src="images/koin 6.png" alt="Koin">
+                <div class="price">Rp 20.000</div>
+            </div>
+            <div class="nominal-card">
+              <img src="images/koin 7.png" alt="Koin">
+              <div class="price">Rp 25.000</div>
+            </div>
+            <div class="nominal-card">
+              <img src="images/koin 8.png" alt="Koin">
+              <div class="price">Rp 30.000</div>
+          </div>
+          <div class="nominal-card">
+            <img src="images/koin 9.png" alt="Koin">
+            <div class="price">Rp 35.000</div>
+          </div>
+        </div>
+  
+          <h2>Pilih Pembayaran</h2>
+          <div class="payment-container">
+            <div class="payment-button">
+                <img src="images/qris.png" alt="qris">
+            </div>
+            <div class="payment-button">
+                <img src="images/bri.png " alt="BRI">
+            </div>
+            <div class="payment-button">
+                <img src="images/bca.png" alt="BCA">
+            </div>
+            <div class="payment-button">
+              <img src="images/mandiri.png" alt="mandiri">
+            </div>
+          </div>
+  
+          <div class="button-container">
+              <button class="right-button">Konfirmasi Pembayaran</button>
+            </div>
+          </div>
+              
+        </div>
+      </div>
+    </div>
+    <!-- Link ke Bootstrap JS dan Popper.js (untuk fitur interaktif seperti dropdown dan carousel) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

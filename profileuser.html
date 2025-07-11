@@ -1,0 +1,327 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Foodie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="profile.css" />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- sidebar start -->
+        <div class="col-1 flex h-screen p-0 position-fixed">
+          <div
+            class="bg-cyan-200 w-20 flex flex-col items-center py-4 space-y-8 rounded-r-3xl border-t-r-0"
+            style="
+              border-top-right-radius: 0px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              height: 100%;
+            "
+          >
+            <div class="flex flex-col items-center space-y-4">
+              <a href="rumah.html" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-house"></i>
+                </div>
+                <span>Beranda</span>
+              </a>
+              <a href="komunitas.html" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-people"></i>
+                </div>
+                <span>Komunitas</span>
+              </a>
+              <a href="chat.html" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-chat-left-text"></i>
+                </div>
+                <span>Obrolan</span>
+              </a>
+              <a href="saveall.html" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-bookmark"></i>
+                </div>
+                <span>Bookmark</span>
+              </a>
+              <a href="unggahfoto.html" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-plus-square"></i>
+                </div>
+                <span>Buat</span>
+              </a>
+              <a href="#" class="menu-item">
+                <div class="icon-container">
+                  <i class="bi bi-gear"></i>
+                </div>
+                <span>Pengaturan</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- sidebar end -->
+
+        <!-- Main Content start -->
+        <div class="col-11 flex-1 p-0">
+          <!-- header start -->
+          <div class="sticky-header">
+            <div class="flex items-center space-x-1">
+              <span class="text-xl font-bold px-2">foodie</span>
+              <div class="koin-nav text-center p-2">
+                <a href="homekoin.html">
+                  <div class="bg-yellow-400 w-8 h-8 flex items-center justify-center rounded-full mx-auto">
+                    <img src="images/Koin.png" alt="">
+                  </div>
+                  <p style="font-size: 12px;">12000</p>
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+              <div class="relative">
+                <input
+                  class="w-96 h-10 pl-4 pr-10 rounded-full border border-black"
+                  placeholder="Search"
+                  type="text"
+                />
+                <i
+                  class="fas fa-search absolute right-3 top-1/2 transform -translate-y-1/2"
+                ></i>
+              </div>
+
+              <a href="#" class="menu-nav">
+                <div class="icon-container">
+                  <i class="bi bi-bell"></i>
+                </div>
+              </a>
+
+              <div class="nav-profile active">
+                <a href="#" class="menu-nav">
+                  <div class="icon-container">
+                    <i class="bi bi-person-circle"></i>
+                  </div>
+                  <span style="text-decoration: none">Chanyeol</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- header end -->
+
+          <!-- profile start -->
+          <section>
+            <div class="profile-card">
+              <img
+                src="https://storage.googleapis.com/a1aa/image/KoqjPsVRWQL9GFbAnyNyU0CExZn1wK1c06AyGjk01Xr4iFAF.jpg"
+                alt="Cover Photo"
+                class="cover"
+              />
+              <div class="text-center">
+                <img
+                  src="images/chef suho.jpg"
+                  alt="Profile Picture"
+                  class="profile-pic"
+                />
+              </div>
+              <div class="actions">
+                <div class="left-content">
+                  <h1 class="mb-1" style="font-weight: bold; font-size: 25px">
+                    Chanyeol
+                  </h1>
+                  <div class="icons">
+                    <span><i class="bi bi-eye"></i>2.1M</span>
+                    <span><i class="bi bi-heart"></i>2.1M</span>
+                  </div>
+                </div>
+                <div class="right-content">
+                  <button class="tombol me-2">Message</button>
+                  <button class="tombol">Follow</button>
+                </div>
+              </div>
+            </div>
+            <!-- info start -->
+            <div class="row">
+              <div class="col-3">
+                <div class="profile-header">
+                  <h2>chef</h2>
+                  <div class="stars">
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star-half-alt"> </i>
+                  </div>
+                </div>
+                <div class="profile-stats">
+                  <div>
+                    <h2>134</h2>
+                    <p>Following</p>
+                  </div>
+                  <div>
+                    <h2>2.345</h2>
+                    <p>Followers</p>
+                  </div>
+                </div>
+                <div class="posts">
+                  <h2>Postingan</h2>
+                  <div class="row g-1">
+                    <!-- Post 1 -->
+                    <div class="col-6 col-md-4">
+                      <img
+                        src="images/stroberi smoothie.jpg"
+                        alt="A loaf of bread with a marbled pattern"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <!-- Post 2 -->
+                    <div class="col-6 col-md-4">
+                      <img
+                        src="images/strawberry-mojitos.jpg"
+                        alt="A plate with a slice of bread and a glass of milk"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="col-4">
+                      <img
+                        alt="A plate with a slice of bread and a glass of milk"
+                        src="images/breakfast.jpg"
+                      />
+                    </div>
+                    <div class="col-4">
+                      <img
+                        alt="A basket of round bread rolls"
+                        src="images/capuccino.jpg"
+                      />
+                    </div>
+                    <div class="col-4">
+                      <img
+                        alt="A loaf of bread with a marbled pattern"
+                        src="images/ayam bawang putih.jpg"
+                      />
+                    </div>
+                    <div class="col-4">
+                      <img
+                        alt="A basket of round bread rolls"
+                        src="images/hainan.jpg"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="profile-container mt-4">
+                  <div class="suggested-profile">
+                    <img
+                      alt="Profile picture of amber ruby"
+                      src="images/chef jaemin.jpg"
+                    />
+                    <div class="info">
+                      <h3>suho cook</h3>
+                      <p>134 Following</p>
+                      <p>2,345 Followers</p>
+                    </div>
+                    <button class="follow-btn">Follow</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-9">
+                <div class="post-container">
+                  <div class="post-header">
+                    <img
+                      alt="User profile picture"
+                      height="40"
+                      src="images/chef suho.jpg"
+                      width="40"
+                    />
+                    <span>Chanyeol</span>
+                  </div>
+                  <img
+                    alt="Plate of food with rice, eggs, and other dishes"
+                    class="post-image"
+                    src="https://storage.googleapis.com/a1aa/image/mzbkDG5iZX5CJhxkAHBfixwnm04tCWhRtOeYdokjBeA9RcGoA.jpg"
+                  />
+                  <div class="post-footer">
+                    <div class="icons">
+                      <i class="fas fa-heart"> </i>
+                      <i class="fas fa-comment"> </i>
+                      <i class="fas fa-share"> </i>
+                    </div>
+                    <p>Nasi Sambal Matah</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- info end -->
+          </section>
+          <!-- profile end -->
+        </div>
+      </div>
+    </div>
+    <!-- Link ke Bootstrap JS dan Popper.js (untuk fitur interaktif seperti dropdown dan carousel) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+  <footer>
+    <div class="footer text-black pt-5">
+      <div class="container content-container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h5>Foodie</h5>
+            <p>
+              Aplikasi penyedia resep masakan yang menghadirkan inspirasi
+              kuliner unutk semua selera. Dari masakan rumahan hinga kreasi,
+              temukan cara baru untuk menikmati makanan setiap hari.
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <h5>Menu</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#resep">Resep</a></li>
+              <li><a href="#kontak">kontak</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h5>Kontak Kami</h5>
+            <p>Alamat: Bandung, Jawa Barat</p>
+            <p>Email:foodieapps@gmail.com</p>
+            <p>Telepon: +62 812 9876 5430</p>
+            <div>
+              <a href="#" class="text-dark me-2"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="text-dark me-2"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" class="text-dark"><i class="bi bi-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center pt-3">
+          <p>© 2024 Foodie - Penyedia Resep Masakan. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</html>

@@ -1,0 +1,600 @@
+body,
+html {
+  background-color: #f9f9f9f9;
+  font-family: "league spartan", sans-serif;
+  margin: 0;
+}
+
+.col-11 {
+  margin-left: 100px; /* Menambahkan margin kiri untuk memberikan ruang di samping sidebar */
+  margin-right: 20px;
+  padding: 20px;
+  width: calc(100% - 80px); /* Menghindari tumpang tindih */
+  overflow-y: auto; /* Agar konten utama scrollable */
+}
+
+.sticky-header {
+  position: fixed;
+  padding: 0;
+  top: 0;
+  left: 80px;
+  width: calc(100% - 80px); /* Menghindari tumpang tindih */
+  z-index: 10; /* Supaya elemen ini berada di atas elemen lain */
+  background-color: #f9f9f9f9; /* Tambahkan background agar tidak transparan */
+}
+
+.menu-item {
+  text-decoration: none; /* Menghapus garis bawah pada link */
+  color: #6e44c2; /* Mengatur warna teks untuk menu */
+  display: flex; /* Menggunakan flexbox untuk menyusun ikon dan teks secara vertikal */
+  flex-direction: column; /* Menyusun ikon dan teks secara kolom */
+  align-items: center; /* Memusatkan ikon dan teks secara horizontal */
+  margin-bottom: 20px; /* Memberikan jarak antara menu-item */
+}
+
+/* Kontainer untuk ikon di menu */
+.icon-container {
+  width: 50px; /* Lebar kontainer ikon */
+  height: 50px; /* Tinggi kontainer ikon */
+  display: flex; /* Flexbox untuk menyusun ikon di tengah */
+  align-items: center; /* Menjaga ikon tetap di tengah secara vertikal */
+  justify-content: center; /* Memusatkan ikon secara horizontal */
+  margin-bottom: 5px; /* Memberikan jarak antara ikon dan teks */
+}
+
+/* Ukuran dan warna ikon di menu */
+.icon-container i {
+  font-size: 24px; /* Ukuran ikon */
+  color: #6e44c2; /* Warna ikon */
+}
+
+/* Teks pada menu item */
+.menu-item span {
+  font-size: 14px; /* Ukuran teks pada menu */
+  color: #6e44c2; /* Warna teks */
+}
+
+/* Efek hover untuk menu item */
+.menu-item:hover .icon-container {
+  background-color: #d4c8f2; /* Warna latar belakang saat hover */
+  border-radius: 50%; /* Membuat background ikonnya berbentuk lingkaran */
+}
+
+.menu-nav {
+  display: flex; /* Menggunakan flexbox untuk menyusun ikon dan teks secara horizontal */
+  align-items: center; /* Memusatkan ikon dan teks secara vertikal */
+}
+
+.menu-nav span {
+  font-size: 14px; /* Ukuran teks pada menu */
+  color: #6e44c2; /* Warna teks */
+  margin-left: 5px; /* Memberikan jarak antara ikon dan teks */
+}
+
+.icon-cont {
+  width: 50px; /* Lebar kontainer ikon */
+  height: 50px; /* Tinggi kontainer ikon */
+  display: flex; /* Flexbox untuk menyusun ikon di tengah */
+  align-items: center; /* Menjaga ikon tetap di tengah secara vertikal */
+  justify-content: center; /* Memusatkan ikon secara horizontal */
+}
+
+/* Ukuran dan warna ikon di menu */
+.icon-cont i {
+  font-size: 24px; /* Ukuran ikon */
+  color: #6e44c2; /* Warna ikon */
+}
+
+.menu-nav span {
+  font-size: 18px; /* Ukuran teks pada menu */
+  color: #6e44c2; /* Warna teks */
+  margin-right: 15px;
+}
+
+/* Efek hover untuk menu item */
+.menu-nav:hover .icon-container {
+  background-color: #d4c8f2; /* Warna latar belakang saat hover */
+  border-radius: 50%; /* Membuat background ikonnya berbentuk lingkaran */
+}
+
+.nav-profile:hover {
+  background-color: #d4c8f2;
+  border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+  .sticky-header {
+    left: 0;
+    width: 100%;
+  }
+
+  .form-control {
+    width: 100%;
+  }
+
+  .nav-profile span {
+    display: none; /* Sembunyikan nama pengguna di perangkat kecil */
+  }
+}
+
+@media (max-width: 576px) {
+  .sticky-header {
+    padding: 10px; /* Mengurangi padding untuk menghemat ruang */
+  }
+
+  .sticky-header .d-flex {
+    flex-direction: column; /* Menumpuk elemen secara vertikal */
+    align-items: center; /* Rata tengah */
+  }
+
+  .sticky-header .d-flex.align-items-center {
+    margin-bottom: 10px; /* Memberikan sedikit jarak antar baris */
+  }
+
+  .form-control {
+    width: 100%; /* Pastikan input pencarian menggunakan seluruh lebar */
+    margin-bottom: 10px; /* Menambahkan ruang bawah pada input */
+  }
+
+  .nav-profile span {
+    display: none; /* Sembunyikan nama pengguna di perangkat kecil */
+  }
+}
+
+
+
+/* Mengatur styling untuk kontainer utama */
+.container {
+/* background-color: white; Warna latar belakang kontainer */
+padding: 16px; /* Menambahkan padding di dalam kontainer */
+display: flex; /* Menggunakan Flexbox untuk tata letak */
+flex-direction: column; /* Menata konten secara vertikal */
+align-items: center; /* Mengatur konten agar terpusat secara horizontal */
+}
+
+.menu-item.active .icon-container {
+  background-color: #d4c8f2;
+  border-radius: 50px;
+}
+
+.menu-item.active span {
+  font-weight: bold;
+}
+
+/* Menata konten utama */
+.main-content {
+display: flex; /* Menggunakan Flexbox untuk menata elemen di dalam konten utama */
+flex-direction: column; /* Menata elemen secara vertikal */
+align-items: center; /* Mengatur elemen agar terpusat secara horizontal */
+}
+
+/* Menata gambar utama */
+.main-image {
+width: 100%;
+object-fit: cover; /* Menjaga proporsi gambar agar menutupi seluruh area */
+border-radius: 12px; /* Membulatkan sudut gambar */
+}
+
+.thumbnails {
+display: flex;
+align-items: center;
+}
+
+.nav-button {
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 5px;
+background: none;
+border: none;
+font-size: 1.5rem;
+cursor: pointer;
+}
+
+.flex {
+display: flex;
+gap: 10px; /* Memberikan jarak antar gambar */
+overflow-x: auto; /* Jika gambar banyak, memungkinkan scroll horizontal */
+}
+
+.thumbnail {
+width: 80px; /* Menyesuaikan ukuran gambar */
+height: auto;
+object-fit: cover;
+border: 1px solid #ddd;
+border-radius: 4px;
+}
+
+
+/* Menata konten detail */
+.details {
+display: flex; /* Menggunakan Flexbox untuk menata konten detail */
+flex-direction: column; /* Menata elemen secara vertikal */
+gap: 16px; /* Memberikan jarak antar elemen di dalam detail */
+margin-top: 16px; /* Memberikan jarak di bagian atas detail */
+margin-left: 50px;
+}
+
+/* Menata judul utama pada detail */
+.details h1 {
+font-size: 24px; /* Ukuran font judul */
+font-weight: bold; /* Mengatur font menjadi tebal */
+}
+
+/* Menata paragraf dalam detail */
+.details p {
+color: #6B7280; /* Warna teks */
+}
+
+/* Menata elemen info (seperti author, waktu, dll.) */
+.details .info {
+display: flex; /* Menggunakan Flexbox untuk menata elemen info */
+align-items: center; /* Memposisikan elemen info secara vertikal di tengah */
+gap: 8px; /* Memberikan jarak antar elemen info */
+}
+
+/* Menata ikon dalam elemen info */
+.details .info i {
+color: #6B7280; /* Warna ikon */
+}
+
+/* Menata span dalam elemen info */
+.details .info span {
+color: #374151; /* Warna teks */
+}
+
+/* Menata sub-judul dalam detail */
+.details h2 {
+font-size: 20px; /* Ukuran font sub-judul */
+font-weight: 600; /* Mengatur font menjadi semi-tebal */
+}
+
+/* Menata daftar bahan dan alat dalam detail */
+.details ul {
+list-style-type: disc; /* Menambahkan titik di depan daftar */
+padding-left: 20px; /* Memberikan padding kiri untuk daftar */
+}
+
+/* Media query untuk layar lebih besar dari 768px */
+@media (min-width: 768px) {
+/* Menata container agar tampil dalam baris (row) pada layar besar */
+.container {
+  flex-direction: row; /* Menata kontainer utama menjadi horizontal */
+  align-items: flex-start; /* Menata konten di sebelah kiri */
+}
+
+/* Menata main-content agar tetap vertikal dan memberi margin kanan */
+.main-content {
+  flex-direction: column; /* Menjaga agar elemen utama tetap vertikal */
+  align-items: center; /* Memposisikan elemen utama secara horizontal di tengah */
+  margin-right: 16px; /* Memberikan margin kanan pada konten utama */
+}
+
+/* Menghilangkan margin-top pada detail di layar besar */
+.details {
+  margin-top: 0; /* Menghapus margin-top untuk penataan yang lebih rapih */
+}
+}
+
+
+
+
+
+/* Menata judul utama pada detail */
+.details h1 {
+font-size: 24px; /* Ukuran font judul */
+font-weight: bold; /* Mengatur font menjadi tebal */
+padding: auto;
+}
+
+/* Menata paragraf dalam detail */
+.details p {
+color: #6B7280; /* Warna teks */
+}
+
+/* Menata elemen info (seperti author, waktu, dll.) */
+.details .info {
+display: flex; /* Menggunakan Flexbox untuk menata elemen info */
+align-items: center; /* Memposisikan elemen info secara vertikal di tengah */
+gap: 8px; /* Memberikan jarak antar elemen info */
+}
+
+/* Menata ikon dalam elemen info */
+.details .info i {
+color: #6B7280; /* Warna ikon */
+}
+
+
+.nav-button {
+background-color: transparent;
+border: none;
+font-size: 1.5rem;
+color: #333;
+cursor: pointer;
+}
+
+.nav-button:focus {
+outline: none;
+}
+
+.nav-button i {
+vertical-align: middle;
+}
+
+/* Menata span dalam elemen info */
+.details .info span {
+color: #374151; /* Warna teks */
+}
+
+/* Menata sub-judul dalam detail */
+.details h2 {
+font-size: 20px; /* Ukuran font sub-judul */
+font-weight: 600; /* Mengatur font menjadi semi-tebal */
+}
+
+/* Menata daftar bahan dan alat dalam detail */
+.details ul {
+list-style-type: disc; /* Menambahkan titik di depan daftar */
+padding-left: 20px; /* Memberikan padding kiri untuk daftar */
+}
+
+/* Media query untuk layar lebih besar dari 768px */
+@media (min-width: 768px) {
+/* Menata container agar tampil dalam baris (row) pada layar besar */
+.container {
+  flex-direction: row; /* Menata kontainer utama menjadi horizontal */
+  align-items: flex-start; /* Menata konten di sebelah kiri */
+}
+
+/* Menata main-content agar tetap vertikal dan memberi margin kanan */
+.main-content {
+  flex-direction: column; /* Menjaga agar elemen utama tetap vertikal */
+  align-items: center; /* Memposisikan elemen utama secara horizontal di tengah */
+  margin-right: 16px; /* Memberikan margin kanan pada konten utama */
+}
+
+/* Menghilangkan margin-top pada detail di layar besar */
+.details {
+  margin-top: 0; /* Menghapus margin-top untuk penataan yang lebih rapih */
+}
+}
+
+
+
+
+
+.recipe-steps {
+max-width: 600px;
+margin: 0 auto;
+margin-top: 20px;
+margin-left: 20px;
+}
+
+.recipe-steps h2 {
+font-size: 20px; /* Ukuran font sub-judul */
+font-weight: 600; /* Mengatur font menjadi semi-tebal */
+padding: auto;
+margin-bottom: 10px;
+
+}
+
+.step {
+display: flex;
+align-items: center;
+/* background-color: white; */
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+margin-bottom: 20px;
+overflow: hidden;
+padding: 5px;
+}
+.step img {
+width: 20%;
+height: auto;
+aspect-ratio: 1 / 1;
+object-fit: cover;
+padding-left: 5px;
+}
+.step-content {
+padding: 15px;
+width: 70%;
+}
+.step-title {
+font-size: 18px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+.step-description {
+font-size: 16px;
+color: #333;
+}
+
+
+
+
+
+/* interaksi */
+.wrapper {
+display: flex;
+gap: 50px;
+text-align: center;
+align-items: center;
+justify-content: center;
+margin-bottom: 15px;
+}
+
+.box {
+background-color: #f9f9f9;
+width: 250px;
+height: 200px;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+padding: 20px;
+text-align: center;
+}
+
+.box h3 {
+font-size: 16px;
+font-weight: bold;
+margin-bottom: 5px;
+color: #333;
+}
+
+
+.stars {
+font-size: 30px;
+display: inline-block;
+
+}
+
+.star {
+  cursor: pointer;
+  color: lightgray;
+  transition: color 0.5s ease;
+}
+
+.star:hover,
+.star:hover ~ .star {
+  color: gold; /* Mengubah warna menjadi emas */
+}
+
+
+
+
+.stars, .coins {
+display: flex;
+justify-content: center;
+gap: 5px;
+margin-bottom: 10px;
+}
+
+.stars .star {
+font-size: 24px;
+color: black;
+cursor: pointer;
+}
+
+.coins .coin {
+background-color: #ffeab9;
+border: 2px solid #ffcb6b;
+border-radius: 50%;
+width: 40px;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: bold;
+color: #333;
+cursor: pointer;
+}
+
+.button {
+background-color: #6499e9;
+border-color: #6499e9;
+width: 200px;
+height: 30px;
+border-radius: 5px;
+padding: 10px;
+font-weight: bold;
+color: white;
+cursor: pointer;
+align-items: center;
+display: flex; /* Menggunakan Flexbox */
+justify-content: center; /* Menyusun teks secara horizontal */
+align-items: center; /* Menyusun teks secara vertikal */
+
+}
+
+
+.button:hover {
+background-color: #6499e9;
+color: white;
+transform: scale(0.95)
+}
+
+
+.comment-container {
+padding: 20px;
+margin-left: 100px;
+margin-right: 100px;
+margin-top: 5px;
+}
+.icons {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 10px;
+}
+.left-icons {
+display: flex;
+gap: 10px;
+}
+.icons i {
+font-size: 24px;
+}
+
+.comment-section {
+display: flex;
+align-items: center;
+}
+.comment-section img {
+border-radius: 50%;
+width: 50px;
+height: 50px;
+margin-right: 10px;
+}
+.comment-section input {
+border: none;
+border-bottom: 1px solid #D3BCA2;
+width: 100%;
+padding: 10px;
+font-size: 16px;
+color: #D3BCA2;
+background: none;
+}
+.comment-section input:focus {
+outline: none;
+}
+.comment-list {
+margin-top: 20px;
+}
+.comment {
+display: flex;
+align-items: center;
+margin-bottom: 10px;
+}
+.comment img {
+border-radius: 50%;
+width: 40px;
+height: 40px;
+margin-right: 10px;
+}
+.comment p {
+background-color: #FFF;
+padding: 10px;
+border-radius: 10px;
+margin: 0;
+}
+.comment-text {
+font-weight: bold;
+margin-bottom: 20px;
+}
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #555;
+  font-size: 0.9rem;
+  margin-top: 30px;
+  margin-left: 100px;
+  margin-right: 30px;
+}
+
+.content-container {
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}

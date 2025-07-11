@@ -1,0 +1,131 @@
+body {
+  font-family: "league spartan", sans-serif;
+  color: #85cddb;
+}
+
+/* Menyeting tinggi gambar agar memenuhi layar penuh secara vertikal */
+.full-height {
+  height: 100vh; /* Tinggi gambar 100% viewport untuk memenuhi setengah layar vertikal */
+  object-fit: cover; /* Pastikan gambar tidak terdistorsi */
+  width: 100%;
+}
+
+.masuk:hover {
+  transform: scale(0.95);
+}
+
+.masuk {
+  color: white;
+  background-color: #6499e9;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+.col-2 {
+  border-right: 5px solid #d9d9d9; /* Border untuk kolom kiri */
+  padding: 0;
+  height: 100vh; /* Agar kolom kiri memenuhi tinggi viewport */
+}
+
+.col-10 {
+  border-left: 5px solid #d9d9d9; /* Border untuk kolom kanan */
+  padding: 20px;
+}
+
+/* Mengatur tampilan list homepage*/
+ul {
+  list-style-type: none; /* Menghilangkan bullet pada list */
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  padding: 15px 10px 5px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+ul li img {
+  width: 42px;
+  height: 32px;
+  padding-right: 10px;
+}
+
+.form-control::placeholder {
+  color: #f09133;
+}
+
+.form-control {
+  outline-style: solid;
+  outline-color: #85cddb;
+}
+
+.custom-outline:focus {
+  outline: 8px solid rgba(100, 153, 233, 0.5); /* Outline dengan opasitas 50% */
+  box-shadow: 0 0 10px rgba(100, 153, 233, 0.5); /* Shadow dengan opasitas 50% */
+  outline: none !important;
+}
+
+.custom-outline.form-control {
+  outline: 1px solid rgba(100, 153, 233, 0.5); /* Outline default dengan opasitas 50% */
+  border-color: rgba(
+    100,
+    153,
+    233,
+    0.5
+  ) !important; /* Border default dengan opasitas 50% */
+}
+
+.custom-outline::placeholder {
+  color: rgba(240, 145, 51, 0.5); /* Placeholder dengan opasitas 50% */
+  font-family: "league spartan", sans-serif; /* Jenis font untuk placeholder */
+}
+
+.google-signup {
+  color: #4472c4;
+}
+
+/* .google-signup{
+    color: #4472c4;
+} */
+
+/*untuk mengatur teks atau dan line*/
+.line-text-alternate {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #85cddb; /* Warna teks */
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.line-text-alternate::before,
+.line-text-alternate::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid #f09133; /* Warna dan ketebalan garis */
+  margin: 0 10px; /* Jarak antara teks dan garis */
+}
+
+.google-signup {
+  display: flex;
+  align-items: center; /* Untuk menyelaraskan gambar dan teks secara vertikal */
+}
+
+/* Menambahkan jarak antara gambar dan teks */
+.google-signup img {
+  margin-right: 8px; /* Sesuaikan jarak sesuai keinginan */
+}
+
+/* Mengubah warna teks */
+.google-signup a {
+  color: #4472c4;
+  text-decoration: none; /* Menghilangkan garis bawah pada teks tautan */
+}
+
+.google-signup a:hover {
+  color: blue;
+  text-decoration: underline; /* Menambahkan garis bawah saat di-hover */
+}
